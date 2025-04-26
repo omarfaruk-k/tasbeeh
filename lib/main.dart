@@ -17,14 +17,33 @@ class thisApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
+
+
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Tasbeeh",
-          style: TextStyle(color: Colors.white70),),
+          title: const Text(
+            "Tasbeeh",
+            style: TextStyle(color: Colors.white70),
+          ),
           centerTitle: true,
         ),
 
-        
+
+
+        bottomNavigationBar: NavigationBar(
+          destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_rounded),
+            label: "Home"),
+          NavigationDestination(
+              icon: Icon(Icons.person_rounded),
+              label: "profile")
+        ],
+        ),
+
+
+
+
       ),
     );
   }
